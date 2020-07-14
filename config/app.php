@@ -136,7 +136,7 @@ return [
 
     'providers' => [
 
-        Barryvdh\Debugbar\ServiceProvider::class,
+        // Barryvdh\Debugbar\ServiceProvider::class,
         GrahamCampbell\Markdown\MarkdownServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Laratrust\LaratrustServiceProvider::class,
@@ -196,7 +196,7 @@ return [
     */
 
     'aliases' => [
-        'Debugbar' => Barryvdh\Debugbar\Facade::class,     
+        // 'Debugbar' => Barryvdh\Debugbar\Facade::class,     
         'Laratrust'=>Laratrust\LaratrustFacade::class,
         'Markdown'=>GrahamCampbell\Markdown\Facades\Markdown::class,
         'App' => Illuminate\Support\Facades\App::class,
