@@ -15,18 +15,20 @@ class Tags extends Migration
     {
         //
         schema::create('tags',function(Blueprint $table){
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('name');
             $table->string('slug')->unique();
             $table->timestamps();
         });
         schema::create('post_tag',function(Blueprint $table){
-            $table->unsignedInteger('post_id');
-            $table->unsignedInteger('tag_id');
-            $table->foreign('post_id')->references('id')->on('post');
-                // ->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('tag_id')->references('id')->on('tag');
-                 //->onUpdate('cascade')->onDelete('cascade');
+            $table->bigInteger('post_id')->unsigned();
+            $table->bigInteger('tag_id')->unsigned();
+        });
+        schema::table('post_tag',function($table){
+            $table->foreign('post_id')->references('id')->on('posts')->onUpdate('cascade')->onDelete('cascade');
+            
+            $table->foreign('tag_id')->references('id')->on('tags')->onUpdate('cascade')->onDelete('cascade');
+                
             $table->primary(['post_id','tag_id']);
         });
     }

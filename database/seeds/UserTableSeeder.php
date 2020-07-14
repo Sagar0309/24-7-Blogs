@@ -14,25 +14,17 @@ class UserTableSeeder extends Seeder
     public function run()
     {
         //
-        DB::statement('SET FOREIGN_KEY_CHECKS=0');
-        DB::table('users')->truncate();
-        
+        //DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        //DB::table('users')->truncate();
+        DB::table('users')->delete();
 
         DB::table('users')->insert([
             [
-                'name'=>"John Doe",
-                'email'=>"johndoe@stat.com",
-                'password'=>bcrypt('secret')
-            ],
-            [
-                'name'=>"Mathw Strike",
-                'email'=>"mathwst@lua.com",
-                'password'=>bcrypt('secret')
-            ],
-            [
-                'name'=>"Keran paige",
-                'email'=>"keranp@itln.com",
-                'password'=>bcrypt('secret')
+                'name'=>"Admin",
+                'email'=>"admin12@gmail.com",
+                'password'=>bcrypt('secret'),
+                'slug'=>"admin",
+                'bio'=>"Access and moniter all accouts and category, tags, user"
             ]
         ]);
     }

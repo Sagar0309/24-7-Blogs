@@ -13,10 +13,10 @@ class AlterUsersAddSlugColumn extends Migration
      */
     public function up()
     {
-        // Schema::table('users', function (Blueprint $table) {
-        //     //
-        //     $table->string('slug');
-        // });
+         Schema::table('users', function (Blueprint $table) {
+             //
+             $table->string('slug');
+         });
     }
 
     /**
@@ -26,9 +26,9 @@ class AlterUsersAddSlugColumn extends Migration
      */
     public function down()
     {
-        // Schema::table('users', function (Blueprint $table) {
-        //     //
-        //     $table->dropColumn('slug');
-        // });
+         Schema::table('users', function (Blueprint $table) {
+             //
+             $table->dropColumn('slug');
+         });
     }
 }

@@ -7,7 +7,7 @@ class NavigationComposer
 {
     public function compose(View $view){
         $this->composeCategories($view);
-        $this->composePopularPost($view);
+        // $this->composePopularPost($view);
     }
     private function composeCategories(View $view){
         $categories=category::with(['posts'=>function($query){
@@ -17,8 +17,8 @@ class NavigationComposer
         $view->with('categories', $categories);
     }
 
-    private function composePopularPost(View $view){
-        $popularPosts=Post::published()->popular()->take(3)->get();
-        $view->with('popularPosts', $popularPosts);
-    }
+    // private function composePopularPost(View $view){
+    //     $popularPosts=Post::published()->popular()->take(3)->get();
+    //     $view->with('popularPosts', $popularPosts);
+    // }
 }

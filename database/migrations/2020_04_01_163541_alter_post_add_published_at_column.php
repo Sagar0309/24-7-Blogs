@@ -11,24 +11,24 @@ class AlterPostAddPublishedAtColumn extends Migration
      *
      * @return void
      */
-    // public function up()
-    // {
-    //     Schema::table('posts', function (Blueprint $table) {
-    //         //
-    //         $table->timestamp('published_at')->nullable();
-    //     });
-    // }
+    public function up()
+     {
+         Schema::table('posts', function (Blueprint $table) {
+             //
+             $table->timestamp('published_at')->nullable();
+         });
+     }
 
     // /**
     //  * Reverse the migrations.
     //  *
     //  * @return void
     //  */
-    // public function down()
-    // {
-    //     Schema::table('posts', function (Blueprint $table) {
-    //         //
-    //         $table->dropColumn('published_at');
-    //     });
-    // }
+     public function down()
+     {
+         Schema::table('posts', function (Blueprint $table) {
+             //
+             $table->dropColumn('published_at');
+         });
+     }
 }

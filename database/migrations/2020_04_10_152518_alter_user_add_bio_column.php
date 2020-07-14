@@ -13,10 +13,10 @@ class AlterUserAddBioColumn extends Migration
      */
     public function up()
     {
-        // Schema::table('users', function (Blueprint $table) {
-        //     //
-        //     $table->text('bio');
-        // });
+         Schema::table('users', function (Blueprint $table) {
+             //
+             $table->text('bio');
+         });
     }
 
     /**
@@ -26,9 +26,9 @@ class AlterUserAddBioColumn extends Migration
      */
     public function down()
     {
-        // Schema::table('users', function (Blueprint $table) {
-        //     //
-        //     $table->dropColumn('bio');
-        // });
+         Schema::table('users', function (Blueprint $table) {
+             //
+             $table->dropColumn('bio');
+         });
     }
 }

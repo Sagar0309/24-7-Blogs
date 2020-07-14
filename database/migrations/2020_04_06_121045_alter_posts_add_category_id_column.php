@@ -13,15 +13,15 @@ class AlterPostsAddCategoryIdColumn extends Migration
      */
     public function up()
     {
-        // Schema::table('posts', function (Blueprint $table) {
-        //     //
-        //     $table->integer('category_id')->unsigned();
-        //     $table->foreign('category_id')->refrences('id')->on('categories')->onDelete('restrict');
-        // });
+        Schema::table('posts', function (Blueprint $table) {
+        
+             $table->bigInteger('category_id')->unsigned()->nullable();
+             //$table->foreign('category_id')->refrences('id')->on('categories');
+         });
 
-        // Schema::table('posts', function($table) {
-        //     $table->foreign('category_id')->references('id')->on('categories');
-        // });
+         Schema::table('posts', function($table) {
+             $table->foreign('category_id')->references('id')->on('categories')->onDelete('restrict');
+         });
     }
 
     /**
@@ -31,9 +31,9 @@ class AlterPostsAddCategoryIdColumn extends Migration
      */
     public function down()
     {
-        // Schema::table('posts', function (Blueprint $table) {
-        //     //
-        //     $table->dropColumn('category_id');
-        // });
+         Schema::table('posts', function (Blueprint $table) {
+             //
+             $table->dropColumn('category_id');
+         });
     }
 }
