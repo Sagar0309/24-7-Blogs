@@ -14,9 +14,10 @@
     var simplemde1 = new SimpleMDE({
         element: $("#excerpt")[0]
     });
-    var simplemde2 = new SimpleMDE({
-        element: $("#body")[0]
-    });
+    // var simplemde2 = new SimpleMDE({
+    //     element: $("#body")[0]
+    // });
+    CKEDITOR.replace( 'body' );
 
     $('#datetimepicker1').datetimepicker({
         format: 'YYYY-MM-DD HH:mm:ss',

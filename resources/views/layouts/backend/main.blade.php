@@ -63,6 +63,7 @@
 <!-- AdminLTE App -->
 <script src="{{ asset('public/backend/js/app.min.js') }}"></script>
 <!-- Simple-mde editor scriptfile -->
+<script src="{{ asset('public/backend/plugins/ckeditor/ckeditor.js') }}"></script>
 <script src="{{ asset('public/backend/plugins/simple-mde/simplemde.min.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
