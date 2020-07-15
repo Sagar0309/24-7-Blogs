@@ -63,7 +63,7 @@
                     </div>
                     <div class="box-body text-center">
                         <div class="form-group {{ $errors->has('category_id') ? 'has-error' : '' }}">
-                            {!! Form::select('category_id', App\Category::pluck('title','id'), null, ['class'=>'form-control', 'placeholder'=>'Choose category']) !!} @if($errors->has('category_id'))
+                            {!! Form::select('category_id', App\category::pluck('title','id'), null, ['class'=>'form-control', 'placeholder'=>'Choose category']) !!} @if($errors->has('category_id'))
                             <span class="help-block">{{ $errors->first('category_id') }}</span> @endif
                         </div>
                     </div>
